@@ -150,7 +150,7 @@ figure img {
 
 
 figure img:hover{
-    transform: scale(1.6); /* Aumenta a foto em 20% */
+    transform: scale(1.2); /* Aumenta a foto em 20% */
     transform-origin: center; /* Faz a foto aumentar a partir do centro */
     z-index: 1; /* Garante que a foto aumentada fique por cima das outras */
     
