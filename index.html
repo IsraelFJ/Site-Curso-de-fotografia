@@ -77,21 +77,13 @@
             
         </div>
         
-        <!-- Lightbox (Modal de Imagem) -->
-        <div id="lightbox" class="lightbox">
-            <span class="close" onclick="closeLightbox()">&times;</span>
-            <img id="lightboxImg">
-            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-            <button class="next" onclick="changeImage(1)">&#10095;</button>
-        </div>
-        
-
-        <div id="lightbox" class="lightbox">
-            <span class="close" onclick="closeLightbox()">&times;</span>
-            <img id="lightboxImg">
-            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-            <button class="next" onclick="changeImage(1)">&#10095;</button>
-        </div>
+       <!-- Mantenha APENAS ESTE lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg">
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+</div>
             
             
         <footer>
@@ -105,6 +97,51 @@
 
            </p>
         </footer>
+
+
+        <script>
+            let currentImageIndex = 0;
+            const images = Array.from(document.querySelectorAll('article img'));
+        
+            function openLightbox(index) {
+                currentImageIndex = index - 1; // Ajuste para array começar em 0
+                document.getElementById('lightbox').style.display = 'flex';
+                updateLightboxImage();
+            }
+        
+            function closeLightbox() {
+                document.getElementById('lightbox').style.display = 'none';
+            }
+        
+            function changeImage(step) {
+                currentImageIndex += step;
+                
+                // Loop pelas imagens
+                if (currentImageIndex >= images.length) currentImageIndex = 0;
+                if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+                
+                updateLightboxImage();
+            }
+        
+            function updateLightboxImage() {
+                const lightboxImg = document.getElementById('lightboxImg');
+                lightboxImg.src = images[currentImageIndex].src;
+            }
+        
+            // Fechar com ESC
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
+            });
+        
+            // Fechar ao clicar fora da imagem
+            document.getElementById('lightbox').addEventListener('click', (e) => {
+                if (e.target === document.getElementById('lightbox')) {
+                    closeLightbox();
+                }
+            });
+        </script>
             
     </div>
     
