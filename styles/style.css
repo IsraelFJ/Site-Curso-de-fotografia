@@ -1,0 +1,268 @@
+@charset "UTF-8";/* Define a codificação do arquivo */
+*{/* Reseta as margens e paddings */
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgba(69, 69, 69, 1.00);
+    margin: 0px;
+}
+
+#mainDiv{
+    width: 90;
+    background-color: rgba(255, 255, 255, 1.00);
+    overflow: auto;
+    border-radius: 15px;/* Borda arredondada */
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(123, 123, 123, 1.00);
+    box-shadow: 5px 5px 15px 0px rgba(123, 123, 123, 1.00);
+    margin: 10px auto 10px auto; 
+}
+
+header{
+    width: 100%;
+    float: left;
+}
+
+#logo{
+    width: 40%;
+    float: left;
+}
+
+#titulo{
+    width: 60%;
+    float: right;
+
+
+}
+h2{
+    font-family: Verdana, sans-serif;
+    font-size: 200%;
+    color: rgba(76, 6, 8, 1.00);
+    margin-left: 30px;
+
+}
+
+nav{
+    width: 25%;
+    float: left;
+    background-color: rgba(75, 11, 12, 1.00);
+}
+
+nav li{
+    width: 100%;
+    float: left;
+    height: 30px;
+    
+    
+}
+
+nav ul{
+    float: left; /* Remove a bolinha da lista */
+    list-style-type: none;/* Remove a bolinha da lista */
+}
+
+nav a{
+    width: 100%; /* Ocupa 100% da largura do li */
+    height: 100%; /* Ocupa 100% da altura do li */
+    display: block; /* Transforma o link em um bloco */
+    font-family: Verdana, sans-serif;
+    font-size: 90%;
+    color: rgba(255, 255, 255, 1.00);
+    line-height: 30px; /* Centraliza o texto verticalmente */
+    text-decoration: none;
+    padding-left: 15px; /* Substitui a margem por padding para alinhar o texto */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    transition: all 0.5s; 
+    
+}
+
+nav a:hover{
+    background-color: rgba(176, 176, 176, 1.00);
+    opacity: 0.6;/* Deixa o fundo mais claro */
+      
+}
+
+section{/* Define a largura e a posição da seção */
+    width: 72%;
+    float: right;
+    
+    
+
+}
+
+article{
+    width: 98%;
+    float: left;
+    padding-left: 2%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer{
+    width: 90%;
+    float: left;
+    padding: 5%;
+    
+}
+
+footer p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 90%;
+    text-align: justify;
+    line-height: 25px;
+   
+
+}
+section p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 90%;
+    text-align: justify;
+    line-height: 25px;
+    margin-right: 15px;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 130%;
+    padding-bottom: 12px;
+}
+
+figure {
+    width: 32%; /* Define a largura para caber 3 colunas */
+    float: left; /* Faz as figuras ficarem lado a lado */
+    margin-right: 1%; /* Adiciona um pequeno espaçamento entre as colunas */
+    margin-bottom: 10px; /* Espaçamento entre as linhas */
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
+}
+
+/* Garante que as imagens tenham o mesmo tamanho */
+figure img {
+    width: 100%;
+    height: 200px; /* Defina uma altura fixa ou use "auto" para manter a proporção */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(123, 123, 123, 1.00);
+    box-shadow: 5px 5px 15px 0px rgba(123, 123, 123, 1.00);
+    transition: all 0.5s;
+    
+}
+
+
+figure img:hover{
+    transform: scale(1.6); /* Aumenta a foto em 20% */
+    transform-origin: center; /* Faz a foto aumentar a partir do centro */
+    z-index: 1; /* Garante que a foto aumentada fique por cima das outras */
+    
+    box-shadow: 5px 5px 15px 0px rgba(123, 123, 123, 1.00);/* Sombra mais forte */
+}
+
+figcaption{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 80%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Estiliza a galeria */
+.gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+@media  screen and (max-width: 600px){
+    #mainDiv{
+        width: 100%;
+    }
+    #titulo{
+        width: 50%;
+    }
+    nav{
+        width: 100%;
+    }
+    nav ul{
+        width: 100%;
+    }
+    section{
+        width: 100%;
+    }
+    figure{
+        width: 48%;
+    }
+    footer{
+        width: 100%;
+    }
+    
+}

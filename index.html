@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Site de Cursos</title>
+</head>
+<body>
+    <div id = "mainDiv">
+        <header>
+            <div id = "logo">
+                <img src="./assets/logo.png" width="300" height="150" alt="Logo">
+            </div>
+              <div id = "titulo">
+                <h2>Aulas de Fotografia e <br> edição de imagens</h2>
+              </div>        
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#"title="Quem Somos">Quem Somos</a></li>
+                <li><a href="#"title="Serviços">Serviços</a></li>
+                <li><a href="#"title="Aulas">Aulas</a></li>
+                <li><a href="#"title="Localização">Localização</a></li>
+                <li><a href="#"title="Contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h1>Descrição</h1>
+            <p>A fotografia vai muito além de apertar um botão. É sobre contar histórias, 
+                expressar emoções e ver o mundo de um jeito único. Com nossos cursos, você não só aprende a fotografar,
+                 mas também desenvolve um olhar mais sensível e criativo para o mundo ao seu redor.
+                Não espere mais! Inscreva-se agora e comece a sua jornada para se tornar um fotógrafo incrível.
+                O próximo clique pode ser o início de uma carreira brilhante 
+                ou de um hobby que vai encher sua vida de cores e memórias inesquecíveis.</p>
+        </section>
+
+        <article>
+            
+            <figure>
+                <img src="./assets/foto1.jpg" alt="Foto 1" onclick="openLightbox(1)">
+                <figcaption><strong>Ilumine sua jornada fotográfica!</strong></figcaption>
+            </figure>
+            <figure>
+                <img src="./assets/foto2.jpg" alt="Foto 2" onclick="openLightbox(2)">
+                <figcaption><strong>Transforme Sua Paixão em Arte!</strong></figcaption>
+            </figure>
+            <figure>
+                <img src="./assets/foto3.jpg" alt="Foto 3" onclick="openLightbox(3)">
+                <figcaption><strong>Guarde lembranças incríveis!</strong></figcaption>
+            </figure>
+            <figure>
+                <img src="./assets/foto4.jpg" alt="Foto 1" onclick="openLightbox(4)">
+                <figcaption><strong>Liberdade criativa, permitindo expressar sua visão única do mundo através das lentes!</strong></figcaption>
+            </figure>
+            <figure>
+                <img src="./assets/foto5.jpg" alt="Foto 2" onclick="openLightbox(5)">
+                <figcaption><strong>Flexibilidade profissional para atuar em diferentes áreas e criar seu próprio ritmo de trabalho!</strong></figcaption>
+            </figure>
+            <figure>
+                <img src="./assets/foto6.jpeg" alt="Foto 3" onclick="openLightbox(6)">
+                <figcaption><strong>Possibilidade de registrar momentos únicos e eternizar histórias e emoções!</strong></figcaption>
+            </figure>
+
+        </article>
+        
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImg">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>         
+           
+          
+           
+            
+        </div>
+        
+        <!-- Lightbox (Modal de Imagem) -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImg">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+        
+
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImg">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+            
+            
+        <footer>
+            <p>
+                Acreditamos que a fotografia vai muito além de apertar um botão. É uma arte, 
+                uma forma de expressão e uma maneira única de contar histórias. 
+                Nosso objetivo é ajudar você a aprimorar suas habilidades, 
+                seja como hobby ou profissão, por meio de cursos completos, 
+                ministrados por fotógrafos experientes e apaixonados pela arte de capturar momentos.
+                Oferecemos desde o básico até técnicas avançadas, incluindo fotografia de retrato, paisagens, moda, eventos, fotografia de estúdio e edição profissional. Com materiais exclusivos, suporte personalizado e uma comunidade de alunos engajados, você terá tudo o que precisa para evoluir na sua jornada fotográfica.
+
+           </p>
+        </footer>
+            
+    </div>
+    
+</body>
+</html>
