@@ -1,5 +1,5 @@
 <div style="background-color: #ffffff; padding: 10px; border-radius: 5px;">
-    <h1 style="color:rgb(76, 73, 231);">Site de cursode Fotografia</h1>
+    <h1 style="color:rgb(76, 73, 231);">Site de curso de Fotografia</h1>
     <h3 style="color:rgb(76, 73, 231);">https://site-curso-de-fotografia.vercel.app/</h3>
     <h3 style="color:rgb(76, 73, 231);">Feito com HTML, CSS, E JAVASCRIPT</h3>
     <h2 style="color: #000000;" >A proposta foi criar uma página de exemplo para um site, incorporando animações dinâmicas nas imagens para tornar a experiência mais interativa e envolvente.</h2></h2>
